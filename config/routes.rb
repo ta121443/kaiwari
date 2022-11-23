@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :new, :create, :destory]
     # sessions
     resources :sessions
+
+    get 'calculations/select', to: 'calculations#select'
+    get 'calculations/total', to: 'calculations#total'
+  
   end
 end
