@@ -1,1 +1,3 @@
-<h1>あおう</h1>
+<% if params[:session_id] %>
+  <%= link_to '登録情報', top_path, class:'btn btn-primary btn-lg' %>
+<% end %>

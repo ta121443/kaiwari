@@ -1,0 +1,41 @@
+body {
+  padding-top: 60px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.btn {
+  margin: 20px 0;
+}
+
+.btn-back {
+  margin-top: 60px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.table {
+  margin-top: 3%;
+}
+
+/* header */
+nav {
+  padding-right: 20px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
