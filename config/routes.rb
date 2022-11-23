@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   scope '/:session_id' do
     # static_pages系
     get '/top', to: 'static_pages#top'
+
+    # groups
+    resources :groups, only: [:index, :new, :create, :destory]
   end
 end
