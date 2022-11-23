@@ -7,5 +7,8 @@ Rails.application.routes.draw do
 
     # groups
     resources :groups, only: [:index, :new, :create, :destory]
+
+    # users
+    resources :users, only: [:index, :new, :create, :destory]
   end
 end
