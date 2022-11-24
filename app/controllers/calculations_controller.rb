@@ -3,5 +3,7 @@ class CalculationsController < ApplicationController
   end
 
   def total
+    @histories = History.where('session_id = ?', params[:session_id])
+    @total = calculate_total(@histories)
   end
 end
