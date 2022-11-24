@@ -9,8 +9,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    group  = Group.new(group_params)
-    if group.save
+    if Group.create(group_params)
       flash[:success] = "グループを追加しました"
       redirect_to groups_path
     else
@@ -22,7 +21,6 @@ class GroupsController < ApplicationController
   end
 
   private
-
     def group_params
       params.require(:group).permit(:name, :session_id)
     end
