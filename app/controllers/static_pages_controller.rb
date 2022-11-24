@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def top
+    @users = User.where('session_id = ?', params[:session_id])
   end
 end
