@@ -1,2 +1,15 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<div class='container-fluid'>
+  <h1 class='title'>グループ作成</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <%= form_with(model: @group, local: true) do |f| %>
+        <%# <%= render "shared/error_messages_html", object: f.object %>
+        <%= f.label :name, "追加するグループ名（必須）" %>
+        <%= f.text_field :name %>
+        <%= f.hidden_field :session_id, value: params[:session_id] %>
+        <%= f.submit "グループを追加する", class: "btn btn-primary btn-lg" %>
+      <% end %>
+    </div>
+  </div>
+</div>

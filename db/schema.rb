@@ -10,13 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_24_031332) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_24_043410) do
   create_table "groups", charset: "utf8mb4", force: :cascade do |t|
-    t.integer "session_id"
+    t.text "session_id"
     t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["session_id"], name: "index_groups_on_session_id"
   end
-
 end
