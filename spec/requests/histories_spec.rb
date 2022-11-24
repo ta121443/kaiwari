@@ -22,6 +22,20 @@ RSpec.describe "Histories", type: :request do
     end
   end
 
+  describe "GET /edit" do
+    it "returns http success" do
+      get "/histories/edit"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET /pudate" do
+    it "returns http success" do
+      get "/histories/pudate"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
   describe "GET /destroy" do
     it "returns http success" do
       get "/histories/destroy"
@@ -32,20 +46,6 @@ RSpec.describe "Histories", type: :request do
   describe "GET /show" do
     it "returns http success" do
       get "/histories/show"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /edit" do
-    it "returns http success" do
-      get "/histories/edit"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /update" do
-    it "returns http success" do
-      get "/histories/update"
       expect(response).to have_http_status(:success)
     end
   end

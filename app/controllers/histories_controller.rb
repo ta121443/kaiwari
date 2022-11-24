@@ -1,4 +1,4 @@
-class HistoryController < ApplicationController
+class HistoriesController < ApplicationController
   def index
   end
 
@@ -8,15 +8,15 @@ class HistoryController < ApplicationController
   def create
   end
 
+  def edit
+  end
+
+  def pudate
+  end
+
   def destroy
   end
 
   def show
-  end
-
-  def edit
-  end
-
-  def update
   end
 end
