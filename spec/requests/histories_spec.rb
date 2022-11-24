@@ -1,51 +1,51 @@
 require 'rails_helper'
 
-RSpec.describe "Sessions", type: :request do
+RSpec.describe "Histories", type: :request do
   describe "GET /index" do
     it "returns http success" do
-      get "/sessions/index"
+      get "/histories/index"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /new" do
     it "returns http success" do
-      get "/sessions/new"
+      get "/histories/new"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /create" do
     it "returns http success" do
-      get "/sessions/create"
+      get "/histories/create"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /destroy" do
     it "returns http success" do
-      get "/sessions/destroy"
+      get "/histories/destroy"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /show" do
     it "returns http success" do
-      get "/sessions/show"
+      get "/histories/show"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /edit" do
     it "returns http success" do
-      get "/sessions/edit"
+      get "/histories/edit"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /update" do
     it "returns http success" do
-      get "/sessions/update"
+      get "/histories/update"
       expect(response).to have_http_status(:success)
     end
   end

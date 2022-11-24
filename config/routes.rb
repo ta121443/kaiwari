@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     resources :groups, only: [:index, :new, :create, :destory]
     # users
     resources :users, only: [:index, :new, :create, :destory]
-    # sessions
-    resources :sessions
+    # histories
+    resources :histories
 
     get 'calculations/select', to: 'calculations#select'
     get 'calculations/total', to: 'calculations#total'
