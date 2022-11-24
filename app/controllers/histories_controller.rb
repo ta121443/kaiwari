@@ -1,7 +1,7 @@
 class HistoriesController < ApplicationController
   def index
     @histories = History.where('session_id = ?', params[:session_id])
-    # @total = calculate_total(@histories)
+    @total = calculate_total(@histories)
   end
 
   def new
@@ -31,13 +31,13 @@ class HistoriesController < ApplicationController
   end
 
   private
-    # def calculate_total(histories)
-    #   total = 0
-    #   histories.each do |history|
-    #     total += history.price
-    #   end
-    #   return total
-    # end
+    def calculate_total(histories)
+      total = 0
+      histories.each do |history|
+        total += history.price
+      end
+      return total
+    end
 
     def history_params
       params.require(:history).permit(:session_id, :user_id, :price, :event)
