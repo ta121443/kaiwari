@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.where('session_id = ?', params[:session_id])
-    # @independent = User.where('group_id = ?', nil)
+    @independent = User.where('group_id is NULL')
   end
 
   def new

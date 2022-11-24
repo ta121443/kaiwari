@@ -2,7 +2,7 @@
   <h1 class='title'>グループ一覧</h1>
 
   <div class='row justify-content-center'>
-    <%= link_to '新規グループ作成', new_group_path, class:'btn btn-primary btn-lg col-md-4'%>
+    <%= link_to '新規グループ登録', new_group_path, class:'btn btn-primary btn-lg col-md-4'%>
   </div>
 
   <div class='row'>
@@ -18,14 +18,14 @@
           <% @groups.each do |group| %>
             <tr>
               <td class="text-center"><%=group.name%></td>
-              <%# <td class="text-center"><%=group.users.count%></td> %>
+              <td class="text-center"><%=group.users.count%></td>
               </td>
             </tr>
           <% end %>
           <!-- 所属なし -->
           <tr>
-            <td class="text-center"> 所属なし </td>
-            <%# <td class="text-center"><%=@nongroup.count%></td> %>
+            <td class="text-center">所属なし</td>
+            <td class="text-center"><%=@independent.count%> </td>
           </tr>
         </tbody>
       </table>

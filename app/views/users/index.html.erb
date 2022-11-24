@@ -1,9 +1,32 @@
-<div class='container'>
-  <h1 class="title">ユーザー一覧</h1>
+<div class='container-fluid'>
+  <h1 class='title'>メンバー一覧</h1>
 
-  <div class="row">
-    <div class="col-md-4 col-md-offset-5">
-      <%= link_to "新規ユーザー作成", new_user_path, class:"btn btn-primary btn-lg col-md-6 col-md-offset-3"%>
+  <div class='row justify-content-center'>
+    <%= link_to '新規メンバー登録', new_user_path, class:'btn btn-primary btn-lg col-md-4'%>
+  </div>
+
+  <div class='row'>
+    <div class='col'>
+      <table class='table table-striped table-hover'>
+        <thead>
+          <tr>
+            <th scope='col' class='text-center'>メンバー名</th>
+            <th scope='col' class='text-center'>所属グループ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td class="text-center"><%=user.name%></td>
+              <% if user.group %>
+                <td class="text-center"><%=user.group.name%></td>
+              <% else %>
+                <td class="text-center">所属なし</td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
