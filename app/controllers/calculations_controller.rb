@@ -6,4 +6,7 @@ class CalculationsController < ApplicationController
     @histories = History.where('session_id = ?', params[:session_id])
     @total = calculate_total(@histories)
   end
+
+  def ratio
+  end
 end

@@ -11,9 +11,10 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :new, :create, :destory]
     # histories
     resources :histories
-
+    # calculations
     get 'calculations/select', to: 'calculations#select'
-    get 'calculations/total', to: 'calculations#total'
+    get 'calculations/total',  to: 'calculations#total'
+    get 'calculations/ratio',  to: 'calculations#ratio'
   
   end
 end
