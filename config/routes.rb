@@ -12,9 +12,10 @@ Rails.application.routes.draw do
     # histories
     resources :histories
     # calculations
-    get 'calculations/select', to: 'calculations#select'
-    get 'calculations/total',  to: 'calculations#total'
-    get 'calculations/ratio',  to: 'calculations#ratio'
+    get  'calculations/select', to: 'calculations#select'
+    get  'calculations/total',  to: 'calculations#total'
+    get  'calculations/ratio',  to: 'calculations#ratio'
+    post 'calculations',        to: 'calculations#condition'
   
   end
 end

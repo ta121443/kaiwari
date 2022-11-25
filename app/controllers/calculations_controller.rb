@@ -8,5 +8,6 @@ class CalculationsController < ApplicationController
   end
 
   def ratio
+    @groups = Group.where('session_id = ?', params[:session_id])
   end
 end
