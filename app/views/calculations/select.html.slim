@@ -2,8 +2,6 @@
   h1.title
     | 精算方法の選択
   .row.justify-content-center
-    = link_to '全員で割り勘', calculations_total_path, class:'btn btn-primary btn-lg col-md-4'
+    = link_to '全員で割り勘', calculations_total_path, class:'btn btn-primary btn-lg col-md-4', data: { turbo_method: "get", turbo_confirm: "計算してもよろしいですか？" }
   #ratio-btn.row.justify-content-center
     = link_to '比率を指定して割り勘', calculations_ratio_path, class:'btn btn-primary btn-lg col-md-4'
-script
-  |  const ratioButton = getElementById('ratio-btn') console.log(ratioButton) 
