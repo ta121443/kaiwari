@@ -1,0 +1,7 @@
+.container-fluid
+  h1.title
+    | 割合を選択
+  .row
+    - @groups.each do |group|
+      .row.justify-content-center.mt-4
+        = group.name

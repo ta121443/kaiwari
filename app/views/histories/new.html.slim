@@ -1,0 +1,15 @@
+.container-fluid
+  h1.title
+    | 立て替え登録
+  .row.justify-content-center
+    .col-md-4
+      = form_with(model: @history, local: true) do |f|
+        - # <%= render "shared/error_messages_html", object: f.object
+        = f.label :user_id, 'ユーザー名'
+        = f.collection_select :user_id, @users, :id, :name, include_blank: '選択してください（必須）'
+        = f.label :event, '用途（必須）'
+        = f.text_field :event
+        = f.label :price, '金額（必須、整数のみ）'
+        = f.text_field :price
+        = f.hidden_field :session_id, value: params[:session_id]
+        = f.submit "立て替えを登録する", class: "btn btn-primary btn-lg"

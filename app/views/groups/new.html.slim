@@ -1,0 +1,11 @@
+.container-fluid
+  h1.title
+    | グループ作成
+  .row.justify-content-center
+    .col-md-4
+      = form_with(model: @group, local: true) do |f|
+        - # <%= render "shared/error_messages_html", object: f.object
+        = f.label :name, "追加するグループ名（必須）"
+        = f.text_field :name
+        = f.hidden_field :session_id, value: params[:session_id]
+        = f.submit "グループを追加する", class: "btn btn-primary btn-lg"

@@ -1,0 +1,27 @@
+.container-fluid
+  h1.title
+    | グループ一覧
+  .row.justify-content-center
+    = link_to '新規グループ登録', new_group_path, class:'btn btn-primary btn-lg col-md-4'
+  .row
+    .col
+      table.table.table-striped.table-hover
+        thead
+          tr
+            th.text-center[scope="col"]
+              | グループ名
+            th.text-center[scope="col"]
+              | 所属人数
+        tbody
+          - @groups.each do |group|
+            tr
+
+            td.text-center
+              =group.name
+            td.text-center
+              =group.users.count
+          tr
+            td.text-center
+              | 所属なし
+            td.text-center
+              =@independent.count
