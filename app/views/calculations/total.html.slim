@@ -1,7 +1,10 @@
 .container-fluid
   h1.title
     | 精算
-  h2.title.mt-5
-    | 総計：
-    = @total
-    |  円
+  h2.title.mt-5 "総計 #{@total} 円"
+  .row.justify-content-center
+    - @payment.each do |pay|
+        h3.text-center.mt-4
+          |
+            #{@users[pay[0]].name} が #{@users[pay[1][0]].name}に 
+            #{pay[1][1]} 円支払う
