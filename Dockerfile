@@ -13,6 +13,9 @@ RUN gem update --system ${RUBYGEMS_VERSION} && \
 
 COPY . /myapp
 
+RUN git config --global user.email "ryo_uchi4_20@outlook.jp" && \
+    git config --global user.name "ta121443"
+
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]

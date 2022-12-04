@@ -7,7 +7,5 @@ class CalculationsController < ApplicationController
     @total = calculate_total(@histories)
   end
 
-  def ratio
-    @groups = Group.where('session_id = ?', params[:session_id])
-  end
+  private
 end
