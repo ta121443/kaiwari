@@ -14,6 +14,5 @@ Rails.application.routes.draw do
     # calculations
     get  'calculations/select', to: 'calculations#select'
     get  'calculations/total',  to: 'calculations#total'
-
   end
 end
